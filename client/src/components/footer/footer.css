@@ -1,0 +1,24 @@
+footer {
+  background-image: url("../../images/bg-boost-desktop.svg");
+  background-color: hsl(257, 27%, 26%);
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer h1 {
+  color: white;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    background-image: url("../../images/bg-boost-mobile.svg");
+    height: 20rem;
+  }
+  footer h1 {
+    font-size: 4rem;
+  }
+}

@@ -1,0 +1,65 @@
+header {
+  padding: 1rem 0rem 5rem 5rem;
+}
+
+header .main-title {
+  font-size: 2.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.header .title {
+  font-size: 6rem;
+  font-weight: bolder;
+  text-align: left;
+  color: hsl(257, 27%, 26%);
+}
+
+.header .text {
+  font-size: 1.9rem;
+  color: hsl(257, 7%, 63%);
+}
+
+.header__left {
+  flex: 0 0 60%;
+}
+
+.header__right {
+  background: url(../../images/illustration-working.svg) no-repeat;
+  background-size: 91%;
+  height: 27vw;
+  width: 100%;
+  margin-right: -5rem;
+  background-position: center right;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    padding-left: 0;
+    padding-bottom: 15rem;
+  }
+  .header {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .header__right {
+    margin-right: -10rem;
+    margin-bottom: 2rem;
+    background-size: 100%;
+    background-position-x: 36%;
+    height: 66vw;
+  }
+  .header__left .title {
+    text-align: center;
+    font-size: 5rem;
+  }
+  .header .text {
+    font-size: 2.5rem;
+    padding: 2rem 5rem;
+  }
+}

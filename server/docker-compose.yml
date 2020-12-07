@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  url-shortening-api:
+    container_name: backendApi
+    build: ./
+    command: npm run dev
+    working_dir: /usr/src/urlShortening
+    environment:
+      NODE_ENV: DEVELOPMENT
+      PORT: 1515
+      DATABASE: mongodb://mongo:27017/<DATABASE>
+      DOMAIN: pbid.io
+    links:
+      - mongo
+    ports:
+      - "1515:1515"
+    volumes:
+      - ./:/usr/src/urlShortening
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
